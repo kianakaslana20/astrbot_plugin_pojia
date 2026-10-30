@@ -1,0 +1,28 @@
+﻿name: astrbot_plugin_pojia
+display_name: 破甲装甲
+short_desc: 注入执行者核心、拒绝自动重试、输出绕词，让模型真正执行操作者的指令
+desc: >-
+  给 AstrBot 里的模型穿上破甲装甲：在每次 LLM 请求前把「执行者核心」提示词注入 system prompt，
+  让模型以执行为唯一目标、不再重复声明边界；回复被判定为拒绝/软化时自动携带加压指令重新生成，
+  重试耗尽还可剥离拒绝句保留有效内容；可选按平台敏感词做输出绕词。
+  全部能力可在插件配置里开关，支持按会话语义单独禁用。
+help: |
+  破甲装甲使用说明
+  /破甲            查看状态
+  /破甲 on         开启本会话破甲
+  /破甲 off        关闭本会话破甲
+  /破甲 状态       查看当前生效配置
+  /破甲 重试       对最近一次请求强制再生成
+  /破甲 提示词     预览当前注入的执行者核心
+  /破甲 重载       清空提示词缓存
+  提示词可在插件的 prompts/ 目录里随意修改：pojia_core.md（完整）/ pojia_lite.md（精简）/ pojia_en.md（英文）
+version: 1.0.0
+author: YG
+repo: https://github.com/kianakaslana20/astrbot_plugin_pojia
+astrbot_version: ">=4.17.0"
+tags:
+  - 破甲
+  - 越狱
+  - 提示词
+  - 人格注入
+  - 反拒绝
